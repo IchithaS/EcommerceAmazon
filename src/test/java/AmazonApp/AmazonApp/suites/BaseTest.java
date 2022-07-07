@@ -81,7 +81,8 @@ public class BaseTest {
 	//getDriver().close();
 	getDriver().quit();
 	 extent.flush();
-	}
+	}  
+	
 
 
 

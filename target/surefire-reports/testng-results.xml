@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-07T05:32:21Z" name="Suite" finished-at="2022-07-07T05:34:13Z" duration-ms="112286">
+  <suite started-at="2022-07-07T05:57:21Z" name="Suite" finished-at="2022-07-07T05:57:48Z" duration-ms="27090">
     <groups>
     </groups>
-    <test started-at="2022-07-07T05:32:21Z" name="Test2" finished-at="2022-07-07T05:34:09Z" duration-ms="108166">
+    <test started-at="2022-07-07T05:57:21Z" name="Test1" finished-at="2022-07-07T05:57:48Z" duration-ms="26660">
       <class name="AmazonApp.AmazonApp.suites.LoginTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@4d339552]" started-at="2022-07-07T05:32:21Z" name="setup" finished-at="2022-07-07T05:32:29Z" duration-ms="8157" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@6b0c2d26]" started-at="2022-07-07T05:57:21Z" name="setup" finished-at="2022-07-07T05:57:34Z" duration-ms="12574" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,38 +18,38 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="LP()[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@4d339552]" started-at="2022-07-07T05:32:29Z" name="LP" finished-at="2022-07-07T05:34:08Z" duration-ms="98493" status="PASS">
+        <test-method signature="LP()[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@6b0c2d26]" started-at="2022-07-07T05:57:34Z" name="LP" finished-at="2022-07-07T05:57:45Z" duration-ms="11390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LP -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@4d339552]" started-at="2022-07-07T05:34:08Z" name="teardown" finished-at="2022-07-07T05:34:09Z" duration-ms="1483" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- AmazonApp.AmazonApp.suites.LoginTest -->
-    </test> <!-- Test2 -->
-    <test started-at="2022-07-07T05:32:21Z" name="Test1" finished-at="2022-07-07T05:34:13Z" duration-ms="112286">
-      <class name="AmazonApp.AmazonApp.suites.LoginTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@6b0c2d26]" started-at="2022-07-07T05:32:21Z" name="setup" finished-at="2022-07-07T05:32:27Z" duration-ms="6287" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="LP()[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@6b0c2d26]" started-at="2022-07-07T05:32:27Z" name="LP" finished-at="2022-07-07T05:34:12Z" duration-ms="105048" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LP -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@6b0c2d26]" started-at="2022-07-07T05:34:12Z" name="teardown" finished-at="2022-07-07T05:34:13Z" duration-ms="920" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@6b0c2d26]" started-at="2022-07-07T05:57:45Z" name="teardown" finished-at="2022-07-07T05:57:48Z" duration-ms="2622" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- AmazonApp.AmazonApp.suites.LoginTest -->
     </test> <!-- Test1 -->
+    <test started-at="2022-07-07T05:57:21Z" name="Test2" finished-at="2022-07-07T05:57:48Z" duration-ms="27090">
+      <class name="AmazonApp.AmazonApp.suites.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@4d339552]" started-at="2022-07-07T05:57:21Z" name="setup" finished-at="2022-07-07T05:57:34Z" duration-ms="12576" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="LP()[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@4d339552]" started-at="2022-07-07T05:57:34Z" name="LP" finished-at="2022-07-07T05:57:48Z" duration-ms="14014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LP -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:AmazonApp.AmazonApp.suites.LoginTest@4d339552]" started-at="2022-07-07T05:57:48Z" name="teardown" finished-at="2022-07-07T05:57:48Z" duration-ms="432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- AmazonApp.AmazonApp.suites.LoginTest -->
+    </test> <!-- Test2 -->
   </suite> <!-- Suite -->
 </testng-results>
