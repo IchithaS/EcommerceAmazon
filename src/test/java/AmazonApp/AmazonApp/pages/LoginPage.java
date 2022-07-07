@@ -1,16 +1,23 @@
 package AmazonApp.AmazonApp.pages;
 
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+
+
+import java.io.File;
 
 public class LoginPage {
 
@@ -108,16 +115,31 @@ public class LoginPage {
 		driver.get("https://www.amazon.in/gp/cart/view.html?ref_=nav_cart");
 		Thread.sleep(3000);
 		test.log(Status.PASS, "added to cart");
-
+		takeScreenshot("cart_item_screenshot");
 		// Delete product
 		WebElement deletecart = driver.findElement(By.xpath("//*[@value='Delete']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click()", deletecart);
 		Thread.sleep(3000);
+		
 		test.log(Status.PASS, "deleting one product");
 	}
 		catch(Exception e){
 			test.log(Status.FAIL, "Test Cases failed");
+			try {
+				takeScreenshot("Screenshot");
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
+	}
+	
+	public void takeScreenshot(String fileName) throws IOException
+	{
+		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(file, new File("C:\\AmazonProject\\AmazonApp\\test-output\\Screenshot\\"+fileName+".jpg"));
+		
+		
 	}
 
 	public boolean switchToWindow() {

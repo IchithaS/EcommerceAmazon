@@ -1,4 +1,6 @@
 package AmazonApp.AmazonApp.suites;
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import AmazonApp.AmazonApp.pages.*;
@@ -17,7 +19,12 @@ public class LoginTest extends BaseTest  {
 		String uname = sheet.getRow(1).getCell(0).getStringCellValue();
 		String pass = sheet.getRow(1).getCell(1).getStringCellValue();
 		
-		LP.Page(uname, pass);
+		try {
+			LP.Page(uname, pass);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
