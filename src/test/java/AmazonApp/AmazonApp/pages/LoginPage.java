@@ -20,20 +20,15 @@ import com.aventstack.extentreports.Status;
 import java.io.File;
 
 public class LoginPage {
-
-	WebDriver driver;
+    WebDriver driver;
 	ExtentTest test;
-
-	public LoginPage(WebDriver driver, ExtentTest test) {
+    public LoginPage(WebDriver driver, ExtentTest test) {
 		this.driver = driver;
 		this.test = test;
 	}
-
-	public void Page(String un, String pwd) throws InterruptedException {
+    public void Page(String un, String pwd) throws InterruptedException {
   
 		try {
-			
-		
 		// Open Google
 		driver.get("https://www.google.com");
 		Thread.sleep(1000);
@@ -45,16 +40,16 @@ public class LoginPage {
 		test.log(Status.PASS, "opening amazon website");
 		driver.get(
 				"https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		test.log(Status.PASS, "Open Amazon website");
 
 		// login to account
 		driver.findElement(By.id("ap_email")).sendKeys(un);
 		driver.findElement(By.id("continue")).click();
-		Thread.sleep(1000);
+		Thread.sleep(4000);
 		driver.findElement(By.id("ap_password")).sendKeys(pwd);
 		driver.findElement(By.id("signInSubmit")).click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		test.log(Status.PASS, "login to account");
 		driver.get(
 				"https://www.amazon.in/gp/yourstore/home?path=%2Fgp%2Fyourstore%2Fhome&signIn=1&useRedirectOnSuccess=1&action=sign-out&ref_=nav_AccountFlyout_signout&");
@@ -63,10 +58,11 @@ public class LoginPage {
 		WebElement searchboxmob = driver.findElement(By.id("twotabsearchtextbox"));
 		searchboxmob.sendKeys("iphone x");
 		searchboxmob.submit();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		driver.findElement(By.linkText("Apple iPhone XR (128GB) - Coral")).click();
+		Thread.sleep(4000);
 		switchToWindow();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		test.log(Status.PASS, "Searching first product");
 
 		WebElement dropdown = driver.findElement(By.xpath("//select[@name='quantity']"));
@@ -94,11 +90,13 @@ public class LoginPage {
 		// purchasing Laptop
 		WebElement searchboxlaptop = driver.findElement(By.id("twotabsearchtextbox"));
 		searchboxlaptop.sendKeys("Laptop");
+		Thread.sleep(3000);
 		searchboxlaptop.submit();
 		Thread.sleep(3000);
 		driver.findElement(By.linkText(
 				"Hp 14S 11Th Gen Intel Core I3- 8Gb Ram/256Gb Ssd 14 Inches Fhd,Micro-Edge,Anti-Glare,IPS Display/Uhd Graphics/ Windows 11 Home/ Ms Office/ Alexa Built-in/ 1.46Kg/ Natural Silver - 14S-Dy2506Tu"))
 				.click();
+		Thread.sleep(3000);
 		switchToWindow();
 		Thread.sleep(3000);
 		test.log(Status.PASS, "Search for second product");
@@ -118,10 +116,12 @@ public class LoginPage {
 		takeScreenshot("cart_item_screenshot");
 		// Delete product
 		WebElement deletecart = driver.findElement(By.xpath("//*[@value='Delete']"));
+		Thread.sleep(2000);
 		((JavascriptExecutor) driver).executeScript("arguments[0].click()", deletecart);
 		Thread.sleep(3000);
 		
 		test.log(Status.PASS, "deleting one product");
+		Thread.sleep(2000);
 	}
 		catch(Exception e){
 			test.log(Status.FAIL, "Test Cases failed");
